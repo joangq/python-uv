@@ -18,8 +18,8 @@ class CommandBase(Command):
         env = kwargs.get('env', os.environ)
         env['PYTHONUTF8'] = '1'
 
-        if verbose:
-            print(' '.join(self.build()))
+        # if verbose:
+        #     print(' '.join(self.build()))
 
         result = super().run(text=text, verbose=verbose, pretty=pretty, **kwargs)
 
