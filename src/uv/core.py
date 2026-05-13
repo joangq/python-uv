@@ -125,8 +125,8 @@ class Uv(CommandBase):
 
     class run(CommandBase):
         module: Command = Field('{value}', lambda x: x.build())
-        active: bool = Field('--active')
-        verbose: bool = Field('--verbose')
+        active: bool = Field('--active', default=False)
+        verbose: bool = Field('--verbose', default=False)
 
     class add(CommandBase):
         modules: str|list[str] = Field('{value}', lambda x: [x] if isinstance(x, str) else x)
